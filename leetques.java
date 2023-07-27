@@ -52,6 +52,7 @@ public class leetques {
         for (int i = 0; i < acc.length; i++) {
             int a = 0, b = 0;
             for (int j = 0; j < acc[i].length; j++) {
+
                 a = acc[i][j];
                 b = b + a;
                 // c = b;
