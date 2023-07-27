@@ -15,7 +15,7 @@ public class binarysearch {
         int[] arr2 = { 100, 85, 70, 63, 55, 42, 36, 20, 18, 10, 5, 0, -1, -9, -20 };
         System.out.println("enter the num in arr2 to get it's index");
         int b = in.nextInt();
-        int ans2 = binaryseach2(arr2, b);
+        int ans2 = binarysearch2(arr2, b);
         System.out.println("index of " + b + " is: " + ans2);
 
     }
@@ -44,7 +44,7 @@ public class binarysearch {
     }
 
     // descending array(sorted)
-    static int binaryseach2(int[] arr, int target) {
+    static int binarysearch2(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
