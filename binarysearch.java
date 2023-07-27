@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class binarysearch {
     public static void main(String[] args) {
 
-        // ascending array(sorted)
+        // // // ascending array(sorted)
         int[] arr = { -2, 0, 1, 5, 8, 10, 11, 13, 45, 85 };
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the number to get it's index");
