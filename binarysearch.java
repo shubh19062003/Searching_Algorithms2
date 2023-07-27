@@ -8,7 +8,7 @@ public class binarysearch {
         Scanner in = new Scanner(System.in);
         System.out.print("Enter the number to get it's index");
         int a = in.nextInt();
-        int ans = binarysearch(arr, a);
+        int ans = binarysearch1(arr, a);
         System.out.println("the index of " + a + " is : " + ans);
 
         // // // descending order(sorted)
@@ -23,7 +23,7 @@ public class binarysearch {
     // func for the algo
 
     // ascending array (sorted)
-    static int binarysearch(int[] arr, int target) {
+    static int binarysearch1(int[] arr, int target) {
         int start = 0;
         int end = arr.length - 1;
         while (start <= end) {
