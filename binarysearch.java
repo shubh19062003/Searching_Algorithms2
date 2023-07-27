@@ -18,6 +18,14 @@ public class binarysearch {
         int ans2 = binarysearch2(arr2, b);
         System.out.println("index of " + b + " is: " + ans2);
 
+        // // // order agnostic binary search
+        // // sorted array but don't know asc or desc
+        int[] arr3 = { 88, 75, 65, 59, 45, 36, 29, 14, 11, 10, 5, 3, 0, -5, -9, -14 };
+        System.out.println("enter the num in arr2 to get it's index");
+        int c = in.nextInt();
+        int ans3 = orderABSearch(arr3, c);
+        System.out.println("index of " + c + " is: " + ans3);
+
     }
 
     // func for the algo
@@ -64,4 +72,45 @@ public class binarysearch {
 
     }
 
+    // // // order Agnostic Binary Search;
+    static int orderABSearch(int[] arr, int target) {
+        if (arr[0] > arr[arr.length - 1]) {
+            int start = 0;
+            int end = arr.length - 1;
+            while (start <= end) {
+                int mid = start + (end - start) / 2;
+                if (arr[mid] > target) {
+                    start = mid + 1;
+                }
+                if (arr[mid] < target) {
+                    end = mid - 1;
+                }
+                if (arr[mid] == target) {
+                    return mid;
+                }
+
+            }
+
+        }
+        if (arr[0] < arr[arr.length - 1]) {
+            int start = 0;
+            int end = arr.length - 1;
+            while (start <= end) {
+                int mid = start + (end - start) / 2; // not using (s+e)/2 as int has
+                if (arr[mid] < target) {
+                    start = mid + 1;
+
+                }
+                if (arr[mid] > target) {
+                    end = mid - 1;
+                }
+                if (target == arr[mid]) {
+                    return mid;
+                }
+
+            }
+
+        }
+        return -1;
+    }
 }
