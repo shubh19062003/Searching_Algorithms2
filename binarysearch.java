@@ -11,6 +11,7 @@ public class binarysearch {
         int ans = binarysearch(arr, a);
         System.out.println("the index of " + a + " is : " + ans);
 
+        // // // descending order(sorted)
         int[] arr2 = { 100, 85, 70, 63, 55, 42, 36, 20, 18, 10, 5, 0, -1, -9, -20 };
         System.out.println("enter the num in arr2 to get it's index");
         int b = in.nextInt();
