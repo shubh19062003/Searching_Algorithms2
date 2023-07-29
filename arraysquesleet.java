@@ -41,13 +41,14 @@ public class arraysquesleet {
         // Input: nums = [3,2,4],
         // target = 6,
         // Output: [1,2]
-        int[] nums = { 3, 2, 4 };
-        int tgt = 6;
+        int[] nums = { 3, 3 };
+        int target = 6;
+
         int a = 0;
         for (int i = 0; i < nums.length; i++) {
             int b = nums[i];
             for (int j = a; j < nums.length; j++) {
-                if (b + nums[j] == tgt) {
+                if (b + nums[j] == target) {
                     System.out.println(i + "," + j);
 
                 }
@@ -55,6 +56,20 @@ public class arraysquesleet {
             a++;
         }
 
-    }
+        // // // different approach
+        // Iterate through the array with two pointers i and j
+        int[] sum = new int[2];
+        for (int i = 0; i < nums.length - 1; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                // Check if the sum of nums[i] and nums[j] is equal to the target
+                if (nums[i] + nums[j] == target) {
+                    // If yes, store the indices in the result array and return
+                    sum[0] = i;
+                    sum[1] = j;
+                }
+            }
 
+        }
+        System.out.println(Arrays.toString(sum));
+    }
 }
