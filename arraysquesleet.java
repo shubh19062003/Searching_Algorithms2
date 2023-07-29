@@ -4,17 +4,17 @@ public class arraysquesleet {
 
     // // // concatenation of arrays q1929.
     public static void main(String[] args) {
-        int[] nums = { 1, 2, 1, 3 };
-        int[] ans = new int[2 * nums.length];
-        int a = 0, b = nums.length;
-        for (int i = 0; i < nums.length; i++) {
-            ans[a] = nums[i];
-            a++;
-            ans[b] = nums[i];
-            b++;
+        // int[] nums = { 1, 2, 1, 3 };
+        // int[] ans = new int[2 * nums.length];
+        // int a = 0, b = nums.length;
+        // for (int i = 0; i < nums.length; i++) {
+        // ans[a] = nums[i];
+        // a++;
+        // ans[b] = nums[i];
+        // b++;
 
-        }
-        System.out.println(Arrays.toString(ans));
+        // }
+        // System.out.println(Arrays.toString(ans));
 
         // reversing an array.
         // int[] nums = { 1, 2, 3, 4, 5 };
@@ -25,10 +25,9 @@ public class arraysquesleet {
         // b++;
         // }
         // System.out.println(Arrays.toString(ans));
-    }
 
-    // // // 1480. Running Sum of 1d Array
-    public int[] returningsum(int[] arr, int target) {
+        // // // 1480. Running Sum of 1d Array
+        int[] arr = { 1, 2, 3, 4, 5 };
         int[] sum = new int[arr.length];
         int a = 0, b = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -36,7 +35,6 @@ public class arraysquesleet {
             b = b + a;
             sum[i] = b;
         }
-        return sum;
+        System.out.println(Arrays.toString(sum));
     }
-
 }
