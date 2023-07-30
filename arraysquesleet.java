@@ -1,4 +1,7 @@
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.List;
 
 public class arraysquesleet {
 
@@ -41,35 +44,68 @@ public class arraysquesleet {
         // Input: nums = [3,2,4],
         // target = 6,
         // Output: [1,2]
-        int[] nums = { 3, 3 };
-        int target = 6;
+        // int[] nums = { 3, 3 };
+        // int target = 6;
 
-        int a = 0;
-        for (int i = 0; i < nums.length; i++) {
-            int b = nums[i];
-            for (int j = a; j < nums.length; j++) {
-                if (b + nums[j] == target) {
-                    System.out.println(i + "," + j);
+        // int a = 0;
+        // for (int i = 0; i < nums.length; i++) {
+        // int b = nums[i];
+        // for (int j = a; j < nums.length; j++) {
+        // if (b + nums[j] == target) {
+        // System.out.println(i + "," + j);
 
-                }
-            }
-            a++;
-        }
+        // }
+        // }
+        // a++;
+        // }
 
         // // // different approach
         // Iterate through the array with two pointers i and j
-        int[] sum = new int[2];
-        for (int i = 0; i < nums.length - 1; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                // Check if the sum of nums[i] and nums[j] is equal to the target
-                if (nums[i] + nums[j] == target) {
-                    // If yes, store the indices in the result array and return
-                    sum[0] = i;
-                    sum[1] = j;
-                }
+        // int[] sum = new int[2];
+        // for (int i = 0; i < nums.length - 1; i++) {
+        // for (int j = i + 1; j < nums.length; j++) {
+        // // Check if the sum of nums[i] and nums[j] is equal to the target
+        // if (nums[i] + nums[j] == target) {
+        // // If yes, store the indices in the result array and return
+        // sum[0] = i;
+        // sum[1] = j;
+        // }
+        // }
+
+        // }
+        // System.out.println(Arrays.toString(sum));
+
+        // // // 1431. Kids With the Greatest Number of Candies
+        /*
+         * Input: candies = [2,3,5,1,3], extraCandies = 3
+         * Output: [true,true,true,false,true]
+         * Explanation: If you give all extraCandies to:
+         * - Kid 1, they will have 2 + 3 = 5 candies, which is the greatest among the
+         * kids.
+         * - Kid 2, they will have 3 + 3 = 6 candies, which is the greatest among the
+         * kids.
+         * - Kid 3, they will have 5 + 3 = 8 candies, which is the greatest among the
+         * kids.
+         * - Kid 4, they will have 1 + 3 = 4 candies, which is not the greatest among
+         * the kids.
+         * - Kid 5, they will have 3 + 3 = 6 candies, which is the greatest among the
+         * kids.
+         */
+
+        int[] candies = { 2, 3, 5, 1, 3 };
+        int extraCandies = 3;
+        ArrayList<Boolean> list = new ArrayList<Boolean>(candies.length);
+        int max = Arrays.stream(candies).max().getAsInt();
+        for (int i = 0; i < candies.length; i++) {
+            if (candies[i] + extraCandies >= max) {
+                list.add(true);
+            } else {
+                list.add(false);
             }
 
         }
-        System.out.println(Arrays.toString(sum));
+        System.out.println(list);
+
     }
+
 }
