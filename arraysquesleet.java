@@ -1,3 +1,4 @@
+import java.lang.annotation.Target;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -118,17 +119,76 @@ public class arraysquesleet {
          * For nums[4]=3 there exist three smaller numbers than it (1, 2 and 2).
          */
 
-        int[] nums = { 6, 5, 4, 8 };
-        int[] ans = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            int count = 0;
-            for (int j = 0; j < nums.length; j++) {
-                if (nums[i] > nums[j]) {
-                    count++;
+        // int[] nums = { 6, 5, 4, 8 };
+        // int[] ans = new int[nums.length];
+        // for (int i = 0; i < nums.length; i++) {
+        // int count = 0;
+        // for (int j = 0; j < nums.length; j++) {
+        // if (nums[i] > nums[j]) {
+        // count++;
 
-                }
-            }
-            ans[i] = count;
+        // }
+        // }
+        // ans[i] = count;
+        // }
+        // System.out.println(Arrays.toString(ans));
+
+        // // // 1389. Create Target Array in the Given Order
+        /*
+         * Initially target array is empty.
+         * From left to right read nums[i] and index[i], insert at index index[i] the
+         * value nums[i] in target array.
+         * Repeat the previous step until there are no elements to read in nums and
+         * index.
+         * 
+         * 
+         * Input: nums = [0,1,2,3,4], index = [0,1,2,2,1]
+         * Output: [0,4,1,3,2]
+         * Explanation:
+         * nums index target
+         * 0 0 [0]
+         * 1 1 [0,1]
+         * 2 2 [0,1,2]
+         * 3 2 [0,1,3,2]
+         * 4 1 [0,4,1,3,2]
+         */
+
+        // ArrayList<Integer> ans = new ArrayList<>();
+        // int[] nums = { 0, 1, 2, 3, 4 };
+        // int[] index = { 0, 1, 2, 2, 1 };
+        // for (int i = 0; i < nums.length; i++) {
+        // ans.add(index[i], nums[i]);
+        // // System.out.print(ans);
+        // }
+        // int target[] = new int[ans.size()];
+        // for (int i = 0; i < ans.size(); i++) {
+        // target[i] = ans.get(i);
+        // }
+        // System.out.println(ans);
+
+        // // // 1470. Shuffle the Array
+        /*
+         * Given the array nums consisting of 2n elements in the form
+         * [x1,x2,...,xn,y1,y2,...,yn].
+         * 
+         * Return the array in the form [x1,y1,x2,y2,...,xn,yn].
+         * Input: nums = [2,5,1,3,4,7], n = 3
+         * Output: [2,3,5,4,1,7]
+         * Explanation: Since x1=2, x2=5, x3=1, y1=3, y2=4, y3=7 then the answer is
+         * [2,3,5,4,1,7].
+         */
+
+        int[] nums = { 2, 5, 1, 3, 4, 7 };
+        int a = 0, b = 1, n = nums.length / 2;
+        int[] ans = new int[nums.length];
+        for (int i = 0; i < n; i++) {
+            ans[a] = nums[i];
+            a = a + 2;
+        }
+        for (int j = n; j < 2 * n; j++) {
+            ans[b] = nums[j];
+            b = b + 2;
+
         }
         System.out.println(Arrays.toString(ans));
     }
