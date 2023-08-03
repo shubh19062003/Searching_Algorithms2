@@ -178,19 +178,75 @@ public class arraysquesleet {
          * [2,3,5,4,1,7].
          */
 
-        int[] nums = { 2, 5, 1, 3, 4, 7 };
-        int a = 0, b = 1, n = nums.length / 2;
-        int[] ans = new int[nums.length];
-        for (int i = 0; i < n; i++) {
-            ans[a] = nums[i];
-            a = a + 2;
-        }
-        for (int j = n; j < 2 * n; j++) {
-            ans[b] = nums[j];
-            b = b + 2;
+        // int[] nums = { 2, 5, 1, 3, 4, 7 };
+        // int a = 0, b = 1, n = nums.length / 2;
+        // int[] ans = new int[nums.length];
+        // for (int i = 0; i < n; i++) {
+        // ans[a] = nums[i];
+        // a = a + 2;
+        // }
+        // for (int j = n; j < 2 * n; j++) {
+        // ans[b] = nums[j];
+        // b = b + 2;
 
+        // }
+        // System.out.println(Arrays.toString(ans));
+
+        // // // 1512. Number of Good Pairs
+        /*
+         * Given an array of integers nums, return the number of good pairs.
+         * 
+         * A pair (i, j) is called good if nums[i] == nums[j] and i < j.
+         * 
+         * Input: nums = [1,2,3,1,1,3]
+         * Output: 4
+         * Explanation: There are 4 good pairs (0,3), (0,4), (3,4), (2,5) 0-indexed.
+         * 
+         */
+
+        // int[] nums = {1,2,3,1,1,3};
+        // int count = 0;
+        // for(int i = 0;i<nums.length;i++){
+        // for(int j =i+1;j<nums.length;j++){
+        // if(nums[i]==nums[j]){
+        // count++;
+        // }
+        // }
+        // }
+        // System.out.println(count);
+
+        // // // 1832. Check if the Sentence Is Pangram
+        /*
+         * Input: sentence = "thequickbrownfoxjumpsoverthelazydog"
+         * Output: true
+         * Explanation: sentence contains at least one of every letter of the English
+         * alphabet.
+         */
+
+        String sentence = "thequickbrownfoxjumpsoverthelazydog";
+        // System.out.println(sentence.length());
+        // for (char i = 'a'; i <= 'z'; i++) {  // direct charecter ko hi use krskte h loop me
+        // if (sentence.indexOf(i) < 0) {
+        // System.out.println("false");
+        // ;
+        // } else {
+        // System.out.println("true");
+        // }
+        // }
+        // System.out.println(sentence.indexOf('b'));
+        
+        // diff approach
+        char start = 'a', end = 'z';
+        int s = (int) start;
+        int e = (int) end;
+        for (int i = s; i <= e; i++) {
+            if (sentence.indexOf(i) < 0) {
+                System.out.println("false");
+            } else {
+                System.out.println("true");
+            }
         }
-        System.out.println(Arrays.toString(ans));
+
     }
 
 }
