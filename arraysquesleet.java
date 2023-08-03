@@ -204,16 +204,16 @@ public class arraysquesleet {
          * 
          */
 
-        // int[] nums = {1,2,3,1,1,3};
-        // int count = 0;
-        // for(int i = 0;i<nums.length;i++){
-        // for(int j =i+1;j<nums.length;j++){
-        // if(nums[i]==nums[j]){
-        // count++;
-        // }
-        // }
-        // }
-        // System.out.println(count);
+        int[] nums = { 1, 2, 3, 1, 1, 3 };
+        int count = 0;
+        for (int i = 0; i < nums.length; i++) {
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[i] == nums[j]) {
+                    count++;
+                }
+            }
+        }
+        System.out.println(count);
 
         // // // 1832. Check if the Sentence Is Pangram
         /*
@@ -224,17 +224,17 @@ public class arraysquesleet {
          */
 
         String sentence = "thequickbrownfoxjumpsoverthelazydog";
-        // System.out.println(sentence.length());
-        // for (char i = 'a'; i <= 'z'; i++) {  // direct charecter ko hi use krskte h loop me
-        // if (sentence.indexOf(i) < 0) {
-        // System.out.println("false");
-        // ;
-        // } else {
-        // System.out.println("true");
-        // }
-        // }
-        // System.out.println(sentence.indexOf('b'));
-        
+        System.out.println(sentence.length());
+        for (char i = 'a'; i <= 'z'; i++) { // direct charecter ko hi use krskte h loop me
+            if (sentence.indexOf(i) < 0) {
+                System.out.println("false");
+                ;
+            } else {
+                System.out.println("true");
+            }
+        }
+        System.out.println(sentence.indexOf('b'));
+
         // diff approach
         char start = 'a', end = 'z';
         int s = (int) start;
