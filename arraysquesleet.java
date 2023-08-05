@@ -204,16 +204,16 @@ public class arraysquesleet {
          * 
          */
 
-        int[] nums = { 1, 2, 3, 1, 1, 3 };
-        int count = 0;
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                if (nums[i] == nums[j]) {
-                    count++;
-                }
-            }
-        }
-        System.out.println(count);
+        // int[] nums = { 1, 2, 3, 1, 1, 3 };
+        // int count = 0;
+        // for (int i = 0; i < nums.length; i++) {
+        //     for (int j = i + 1; j < nums.length; j++) {
+        //         if (nums[i] == nums[j]) {
+        //             count++;
+        //         }
+        //     }
+        // }
+        // System.out.println(count);
 
         // // // 1832. Check if the Sentence Is Pangram
         /*
@@ -223,30 +223,57 @@ public class arraysquesleet {
          * alphabet.
          */
 
-        String sentence = "thequickbrownfoxjumpsoverthelazydog";
-        System.out.println(sentence.length());
-        for (char i = 'a'; i <= 'z'; i++) { // direct charecter ko hi use krskte h loop me
-            if (sentence.indexOf(i) < 0) {
-                System.out.println("false");
-                ;
-            } else {
-                System.out.println("true");
-            }
-        }
-        System.out.println(sentence.indexOf('b'));
+        // String sentence = "thequickbrownfoxjumpsoverthelazydog";
+        // System.out.println(sentence.length());
+        // for (char i = 'a'; i <= 'z'; i++) { // direct charecter ko hi use krskte h loop me
+        //     if (sentence.indexOf(i) < 0) {
+        //         System.out.println("false");
+        //         ;
+        //     } else {
+        //         System.out.println("true");
+        //     }
+        // }
+        // System.out.println(sentence.indexOf('b'));
 
         // diff approach
-        char start = 'a', end = 'z';
-        int s = (int) start;
-        int e = (int) end;
-        for (int i = s; i <= e; i++) {
-            if (sentence.indexOf(i) < 0) {
-                System.out.println("false");
-            } else {
-                System.out.println("true");
-            }
-        }
+        // char start = 'a', end = 'z';
+        // int s = (int) start;
+        // int e = (int) end;
+        // for (int i = s; i <= e; i++) {
+        //     if (sentence.indexOf(i) < 0) {
+        //         System.out.println("false");
+        //     } else {
+        //         System.out.println("true");
+        //     }
+        // }
 
+        // // // 1732. Find the Highest Altitude
+
+        /*
+         * There is a biker going on a road trip. The road trip consists of n + 1 points
+         * at different altitudes. The biker starts his trip on point 0 with altitude
+         * equal 0.
+         * 
+         * You are given an integer array gain of length n where gain[i] is the net gain
+         * in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the
+         * highest altitude of a point.
+         * Input: gain = [-5,1,5,0,-7]
+         * Output: 1
+         * Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
+         */
+
+        int[] gain = {-5,1,5,0,-7};
+        int a = 0, b = gain[0];
+        int[] ans = new int[gain.length + 1];
+        ans[0] = 0;
+        for (int i = 0; i < gain.length; i++) {
+            int c = a + gain[i];
+            a = c;
+            ans[i + 1] = a;
+
+        }
+        int c = Arrays.stream(ans).max().getAsInt();
+        System.out.println(c);
     }
 
 }
