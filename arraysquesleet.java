@@ -286,27 +286,51 @@ public class arraysquesleet {
          * ["computer","silver","lenovo"].
          */
 
-        String[][] items = { { "phone", "blue", "pixel" }, { "computer", "silver", "lenovo" },
-                { "phone", "gold", "iphone" } };
-        String ruleKey = "type", ruleValue = "phone";
-        int i = 0, a = 0, count = 0;
-        if (ruleKey == "color") {
-            a = 1;
-        }
-        if (ruleKey == "type") {
-            a = 0;
-        }
-        if (ruleKey == "name") {
-            a = 2;
-        }
-        for (i = 0; i < items.length; i++) {
-            if (items[i][a] == ruleValue) {
-                count++;
-            }
-        }
-        System.out.println(count);
-        
+        // String[][] items = { { "phone", "blue", "pixel" }, { "computer", "silver",
+        // "lenovo" },
+        // { "phone", "gold", "iphone" } };
+        // String ruleKey = "type", ruleValue = "phone";
+        // int i = 0, a = 0, count = 0;
+        // if (ruleKey == "color") {
+        // a = 1;
+        // }
+        // if (ruleKey == "type") {
+        // a = 0;
+        // }
+        // if (ruleKey == "name") {
+        // a = 2;
+        // }
+        // for (i = 0; i < items.length; i++) {
+        // if (items[i][a] == ruleValue) {
+        // count++;
+        // }
+        // }
+        // System.out.println(count);
 
+        // // // 832. Flipping an Image
+        /*
+         * Input: image = [[1,1,0],[1,0,1],[0,0,0]]
+         * Output: [[1,0,0],[0,1,0],[1,1,1]]
+         * Explanation: First reverse each row: [[0,1,1],[1,0,1],[0,0,0]].
+         * Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
+         */
+
+        int[][] image = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 0 } };
+        int[][] ans = new int[image.length][image.length];
+        for (int i = 0; i < image.length; i++) {
+            int a = 0;
+            for (int j = image.length - 1; j >= 0; j--) {
+                if (image[i][j] == 0) {
+                    ans[i][a] = 1;
+
+                } else {
+                    ans[i][a] = 0;
+                }
+                a++;
+            }
+
+        }
+        System.out.print(Arrays.deepToString(ans));
     }
 
 }
