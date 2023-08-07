@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedHashSet;
 import java.util.List;
 
@@ -29,13 +30,11 @@ public class str {
 
         System.out.println(arrayList2D.size());
 
-        System.out.println(arrayList2D.get(0).get(1));
-        System.out.println(arrayList2D.get(1).get(1));
-        System.out.println(arrayList2D.get(2).get(1));
+        // System.out.println(arrayList2D.get(0).get(1));
+        // System.out.println(arrayList2D.get(1).get(1));
+        // System.out.println(arrayList2D.get(2).get(1));
+        System.out.println((arrayList2D));
 
-
-
-        
 
     }
 
