@@ -315,7 +315,7 @@ public class arraysquesleet {
          * Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
          */
 
-        int[][] image = { { 1, 1, 0 }, { 1, 0, 1 }, { 0, 0, 0 } };
+        int[][] image = { {1,1,0},{1,0,1},{0,0,0} };
         int[][] ans = new int[image.length][image.length];
         for (int i = 0; i < image.length; i++) {
             int a = 0;
