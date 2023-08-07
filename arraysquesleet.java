@@ -207,11 +207,11 @@ public class arraysquesleet {
         // int[] nums = { 1, 2, 3, 1, 1, 3 };
         // int count = 0;
         // for (int i = 0; i < nums.length; i++) {
-        //     for (int j = i + 1; j < nums.length; j++) {
-        //         if (nums[i] == nums[j]) {
-        //             count++;
-        //         }
-        //     }
+        // for (int j = i + 1; j < nums.length; j++) {
+        // if (nums[i] == nums[j]) {
+        // count++;
+        // }
+        // }
         // }
         // System.out.println(count);
 
@@ -225,13 +225,14 @@ public class arraysquesleet {
 
         // String sentence = "thequickbrownfoxjumpsoverthelazydog";
         // System.out.println(sentence.length());
-        // for (char i = 'a'; i <= 'z'; i++) { // direct charecter ko hi use krskte h loop me
-        //     if (sentence.indexOf(i) < 0) {
-        //         System.out.println("false");
-        //         ;
-        //     } else {
-        //         System.out.println("true");
-        //     }
+        // for (char i = 'a'; i <= 'z'; i++) { // direct charecter ko hi use krskte h
+        // loop me
+        // if (sentence.indexOf(i) < 0) {
+        // System.out.println("false");
+        // ;
+        // } else {
+        // System.out.println("true");
+        // }
         // }
         // System.out.println(sentence.indexOf('b'));
 
@@ -240,11 +241,11 @@ public class arraysquesleet {
         // int s = (int) start;
         // int e = (int) end;
         // for (int i = s; i <= e; i++) {
-        //     if (sentence.indexOf(i) < 0) {
-        //         System.out.println("false");
-        //     } else {
-        //         System.out.println("true");
-        //     }
+        // if (sentence.indexOf(i) < 0) {
+        // System.out.println("false");
+        // } else {
+        // System.out.println("true");
+        // }
         // }
 
         // // // 1732. Find the Highest Altitude
@@ -262,18 +263,50 @@ public class arraysquesleet {
          * Explanation: The altitudes are [0,-5,-4,1,1,-6]. The highest is 1.
          */
 
-        int[] gain = {-5,1,5,0,-7};
-        int a = 0, b = gain[0];
-        int[] ans = new int[gain.length + 1];
-        ans[0] = 0;
-        for (int i = 0; i < gain.length; i++) {
-            int c = a + gain[i];
-            a = c;
-            ans[i + 1] = a;
+        // int[] gain = { -5, 1, 5, 0, -7 };
+        // int a = 0;
+        // int[] ans = new int[gain.length + 1];
+        // ans[0] = 0;
+        // for (int i = 0; i < gain.length; i++) {
+        // int c = a + gain[i];
+        // a = c;
+        // ans[i + 1] = a;
 
+        // }
+        // int c = Arrays.stream(ans).max().getAsInt();
+        // System.out.println(c);
+
+        // // // 1773. Count Items Matching a Rule
+        /*
+         * Input: items =
+         * [["phone","blue","pixel"],["computer","silver","lenovo"],["phone","gold",
+         * "iphone"]], ruleKey = "color", ruleValue = "silver"
+         * Output: 1
+         * Explanation: There is only one item matching the given rule, which is
+         * ["computer","silver","lenovo"].
+         */
+
+        String[][] items = { { "phone", "blue", "pixel" }, { "computer", "silver", "lenovo" },
+                { "phone", "gold", "iphone" } };
+        String ruleKey = "type", ruleValue = "phone";
+        int i = 0, a = 0, count = 0;
+        if (ruleKey == "color") {
+            a = 1;
         }
-        int c = Arrays.stream(ans).max().getAsInt();
-        System.out.println(c);
+        if (ruleKey == "type") {
+            a = 0;
+        }
+        if (ruleKey == "name") {
+            a = 2;
+        }
+        for (i = 0; i < items.length; i++) {
+            if (items[i][a] == ruleValue) {
+                count++;
+            }
+        }
+        System.out.println(count);
+        
+
     }
 
 }
