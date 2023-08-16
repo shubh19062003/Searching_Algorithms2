@@ -330,7 +330,7 @@ public class arraysquesleet {
             }
 
         }
-        System.out.print(Arrays.deepToString(ans));
+        System.out.print(Arrays.deepToString(ans)); 
     }
 
 }
