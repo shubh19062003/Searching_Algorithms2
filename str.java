@@ -34,7 +34,7 @@ public class str {
         // System.out.println(arrayList2D.get(1).get(1));
         // System.out.println(arrayList2D.get(2).get(1));
         System.out.println((arrayList2D));
-
+        
 
     }
 
