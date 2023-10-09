@@ -8,24 +8,24 @@ public class leetques {
         Scanner in = new Scanner(System.in);
         // leetcode ques 1 from kk vid
 
-        int[] num = { 12, 345, 26, 6, 1245, 455, 42, 451, 126, 5536 };
-        int count1 = 0, d = 0;
-        for (int i = 0; i < num.length; i++) {
-            int a = num[i];
-            int b, c, count = 0;
-            while (a > 0) {
-                b = a % 10;
-                a = a / 10;
-                if (b > 0) {
-                    count++;
-                }
-            }
-            if (count % 2 == 0) {
-                count1++;
+        // int[] num = { 12, 345, 26, 6, 1245, 455, 42, 451, 126, 5536 };
+        // int count1 = 0, d = 0;
+        // for (int i = 0; i < num.length; i++) {
+        // int a = num[i];
+        // int b, c, count = 0;
+        // while (a > 0) {
+        // b = a % 10;
+        // a = a / 10;
+        // if (b > 0) {
+        // count++;
+        // }
+        // }
+        // if (count % 2 == 0) {
+        // count1++;
 
-            }
+        // }
 
-        }
+        // }
 
         // System.out.println(count1);
 
@@ -45,24 +45,40 @@ public class leetques {
         // System.out.println(str2.length());
 
         // ques 2: (max wealth problem)
-        int[][] acc = { { 1, 2 }, { 2, 2 }, { 4, 2 }, { 5, 4 }, { 8, 5 } };
-        ArrayList<Integer> sum = new ArrayList<>(4);
+        // int[][] acc = { { 1, 2 }, { 2, 2 }, { 4, 2 }, { 5, 4 }, { 8, 5 } };
+        // ArrayList<Integer> sum = new ArrayList<>(4);
 
-        // int c = 0;
-        for (int i = 0; i < acc.length; i++) {
-            int a = 0, b = 0;
-            for (int j = 0; j < acc[i].length; j++) {
+        // // int c = 0;
+        // for (int i = 0; i < acc.length; i++) {
+        // int a = 0, b = 0;
+        // for (int j = 0; j < acc[i].length; j++) {
 
-                a = acc[i][j];
-                b = b + a;
-                // c = b;
+        // a = acc[i][j];
+        // b = b + a;
+        // // c = b;
+
+        // }
+
+        // sum.add(b);
+        // }
+
+        // System.out.println(Collections.max(sum));
+
+        double a = in.nextInt();
+        if (a == 1 || a == 2 || a == 3) {
+            System.out.println("not a prime");
+        }
+        for (int i = 2; i <= Math.sqrt(a); i++) {
+            if (a % i == 0) {
+                System.out.println("not a prime");
+
+            } else {
+                System.out.println("prime");
+                break;
 
             }
-
-            sum.add(b);
         }
 
-        System.out.println(Collections.max(sum));
     }
 
 }

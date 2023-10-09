@@ -1,13 +1,15 @@
 public class binaryques {
     public static void main(String[] args) {
-        int[] arr = { -10, 2, 3, 5, 9, 14, 16, 18, 22, 28, 33 };
+        int[] arr = { 5, 7, 7, 8, 10 };
+        int a = focc(arr, 7);
+        System.out.println(a);
         // int a = cieling(arr, 4);
         // System.out.println(a);
         // int b = floor(arr, 4);
         // System.out.println(b);
-        char letters[] = { 'e', 'g', 'k', 'p', };
-        char ans = nextGreatestLetter(letters, 'l');
-        System.out.println(ans);
+        // char letters[] = { 'e', 'g', 'k', 'p', };
+        // char ans = nextGreatestLetter(letters, 'l');
+        // System.out.println(ans);
         // System.out.println(arr1[0]);
         // if(arr1[0]<arr1[2]){
         // System.out.println("true");
@@ -98,24 +100,45 @@ public class binaryques {
 
     }
 
-    static char nextGreatestLetter(char[] letters, char target) {
-        int start = 0, end = letters.length - 1;
+    // static char nextGreatestLetter(char[] letters, char target) {
+    // int start = 0, end = letters.length - 1;
+    // while (start <= end) {
+    // int mid = start + (end - start) / 2;
+    // // if (letters[letters.length - 1] <= target) {
+    // // return letters[0];
+    // // }
+    // if (letters[mid] > target) {
+    // end = mid - 1;
+    // }
+    // else {
+    // start = mid + 1;
+    // }
+    // // if (letters[mid] <= target) {
+    // // return letters[mid + 1];
+    // // }
+    // }
+    // return letters[start%letters.length];
+    // }
+
+    static int focc(int[] arr, int target) {
+        int start = 0;
+        int end = arr.length - 1;
         while (start <= end) {
-            int mid = start + (end - start) / 2;
-            // if (letters[letters.length - 1] <= target) {
-            //     return letters[0];
-            // }
-            if (letters[mid] > target) {
+            int mid = start + (end - start) / 2; // not using (s+e)/2 as int has
+            if (arr[mid] < target) {
+                start = mid + 1;
+
+            }
+            if (arr[mid] > target) {
                 end = mid - 1;
             }
-            else  {
-                start = mid + 1;
+            if (target == arr[mid]) {
+                return mid;
+                
             }
-            // if (letters[mid] <= target) {
-            //     return letters[mid + 1];
-            // }
+
         }
-        return letters[start%letters.length];
+        return -1;
     }
 
 }
