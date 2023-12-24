@@ -65,8 +65,12 @@ public class leetques {
         // System.out.println(Collections.max(sum));
 
         double a = in.nextInt();
-        if (a == 1 || a == 2 || a == 3) {
-            System.out.println("not a prime");
+        if (a == 1 || a == 0) {
+            System.out.println("0");
+            System.exit(0);
+        }
+        if(a<4){
+            System.out.println("2 3");
         }
         for (int i = 2; i <= Math.sqrt(a); i++) {
             if (a % i == 0) {

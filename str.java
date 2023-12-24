@@ -94,10 +94,18 @@ public class str {
         // // System.out.println(false);
         // }
 
-        String s = "hello";
-        String s1 = "";
-        String s2 = s+s1;
-        System.out.println(s2);
+        // String s = "hello";
+        // String s1 = "";
+        // String s2 = s + s1;
+        // char a = s.charAt(2);
+        // String b = s.toUpperCase();
+        // System.out.println(b);
+        // if (s.charAt(1) < s.charAt(2)) {
+        // System.out.println("true");
+        // } else {
+        // System.out.println("false");
+        // }
+
         // StringBuilder s2 = new StringBuilder();
         // for (int i = 0; i < s1.length(); i++) {
         // if (s1.charAt(i) == 'h' || s1.charAt(i) == 'e' || s1.charAt(i) == 'o') {
@@ -125,5 +133,22 @@ public class str {
         // System.out.println(s);
         // }
 
+        int n = (int)(Math.pow(-1, 2)) * 5;
+        System.out.println(n);
+
+
+        // String s = in.next();
+        // char a = s.charAt(0);
+        // if(Character.isUpperCase(a)==true){
+        //     System.out.print(s);
+        // }else{
+        //     a=Character.toUpperCase(a);
+        //     System.out.print(a);
+        //     for(int i =1;i<s.length();i++){
+        //         System.out.print(s.charAt(i));
+        //     }
+        // }
+
     }
+
 }
