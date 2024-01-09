@@ -133,8 +133,8 @@ public class str {
         // System.out.println(s);
         // }
 
-        int n = (int)(Math.pow(-1, 2)) * 5;
-        System.out.println(n);
+        // int n = (int)(Math.pow(-1, 2)) * 5;
+        // System.out.println(n);
 
 
         // String s = in.next();
@@ -149,6 +149,26 @@ public class str {
         //     }
         // }
 
-    }
 
+        String A = "ADGAGAGFG";
+        int a = countag(A);
+        System.out.println(a);
+
+
+    }
+    
+    public  static int countag(String str){
+        int gc =0;
+        int ans = 0;
+        for(int i=str.length()-1;i>=0;i--){
+            if(str.charAt(i)=='G'){
+                gc++;
+                
+            }
+            if(str.charAt(i)=='A'){
+                ans=ans+gc;
+            }
+        }
+        return ans;
+    }
 }

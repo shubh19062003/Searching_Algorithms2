@@ -3,11 +3,13 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
+import java.util.Scanner;
 
 public class arraysquesleet {
 
     // // // concatenation of arrays q1929.
     public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
         // int[] nums = { 1, 2, 1, 3 };
         // int[] ans = new int[2 * nums.length];
         // int a = 0, b = nums.length;
@@ -315,22 +317,64 @@ public class arraysquesleet {
          * Then, invert the image: [[1,0,0],[0,1,0],[1,1,1]]
          */
 
-        int[][] image = { {1,1,0},{1,0,1},{0,0,0} };
-        int[][] ans = new int[image.length][image.length];
-        for (int i = 0; i < image.length; i++) {
-            int a = 0;
-            for (int j = image.length - 1; j >= 0; j--) {
-                if (image[i][j] == 0) {
-                    ans[i][a] = 1;
+        // int[][] image = { {1,1,0},{1,0,1},{0,0,0} };
+        // int[][] ans = new int[image.length][image.length];
+        // for (int i = 0; i < image.length; i++) {
+        // int a = 0;
+        // for (int j = image.length - 1; j >= 0; j--) {
+        // if (image[i][j] == 0) {
+        // ans[i][a] = 1;
 
-                } else {
-                    ans[i][a] = 0;
-                }
-                a++;
-            }
+        // } else {
+        // ans[i][a] = 0;
+        // }
+        // a++;
+        // }
 
+        // }
+        // System.out.println(Arrays.deepToString(ans));
+
+        int[] arr = { -7, 1,5,2,-4,3,0};
+        int[] presum = new int[arr.length];
+        int sum = 0;
+        for (int i = 0; i < arr.length; i++) {
+            sum = arr[i] + sum;
+            presum[i] = sum;
         }
-        System.out.print(Arrays.deepToString(ans)); 
+        System.out.println(Arrays.toString(presum));
+
+        // int l = in.nextInt();
+        // int r = in.nextInt();
+        // if (l == 0) {
+        //     System.out.println(presum[r]);
+        // } else {
+        //     System.out.println(presum[r] - presum[l - 1]);
+        // }
+        
+        //` equilibrium index..
+        for (int j = 1; j < presum.length; j++) {
+            if (j == 1) {
+                if (presum[presum.length - 1] == presum[presum.length - 1] - presum[j]) {
+                    System.out.println("eqb index is = 0 ");
+                }
+            }
+            if (presum[j - 1] == presum[presum.length - 1] - presum[j]) {
+                System.out.println("eqb index is = " + j);
+                // break;
+            } else {
+                continue;
+            }
+        }
+
+        // long a = 22;
+        // double b = Math.sqrt(a);
+        // System.out.println(b);
+        // if (b == Math.floor(b)) {
+        // System.out.println(a + " is a perfect square.");
+        // } else {
+        // System.out.println(a + " is not a perfect square.");
+        // }
+
     }
 
 }
