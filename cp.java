@@ -66,7 +66,7 @@ public class cp {
                     }
 
                 }
-                ans++;
+                 ans++;
             }
         }
 
